@@ -6,5 +6,9 @@ return function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	})
-	  use('theprimeagen/harpoon')
+	use('theprimeagen/harpoon')
+	use {
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	}
 end
