@@ -222,6 +222,9 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'vim', 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help' },
+  autotag = {
+    enable = true
+  },
 
   highlight = { enable = true },
   indent = { enable = true, disable = { 'python' } },
@@ -271,7 +274,7 @@ require('nvim-treesitter.configs').setup {
     swap = {
       enable = true,
       swap_next = {
-        ['<leader>a'] = '@parameter.inner',
+        ['<leader>b'] = '@parameter.inner',
       },
       swap_previous = {
         ['<leader>A'] = '@parameter.inner',
