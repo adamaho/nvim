@@ -105,7 +105,7 @@ vim.wo.number = true
 vim.o.mouse = 'a'
 
 -- Enable break indent
-vim.o.breakindent = true
+vim.o.breakindent = true 
 
 -- Save undo history
 vim.o.undofile = true
@@ -228,7 +228,7 @@ require('nvim-treesitter.configs').setup {
   },
 
   highlight = { enable = true },
-  indent = { enable = true, disable = { 'python' } },
+  indent = { enable = false, disable = { 'python' } },
   incremental_selection = {
     enable = true,
     keymaps = {
