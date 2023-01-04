@@ -224,7 +224,7 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = { 'vim', 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help' },
   autotag = {
     enable = true,
-    filetypes = { "html", "typescriptreact" }
+    filetypes = { "html" , "typescriptreact" , "tsx" , "typescript" }
   },
 
   highlight = { enable = true },
