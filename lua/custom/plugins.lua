@@ -11,5 +11,4 @@ return function(use)
 		"windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
 	}
-	require('nvim-ts-autotag').setup()
 end
