@@ -3,6 +3,7 @@
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.opt.termguicolors = true
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 require('lazy-bootstrap')

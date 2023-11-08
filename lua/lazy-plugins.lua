@@ -92,10 +92,10 @@ require('lazy').setup({
 
   {
     -- Theme inspired by Atom
-    'rose-pine/neovim',
+    'catppuccin/nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'rose-pine'
+      vim.cmd.colorscheme 'catppuccin-frappe'
     end,
   },
 
