@@ -58,7 +58,15 @@ require('lazy').setup({
     },
     config = function()
       require("neo-tree").setup({
+        git_status = {
+          window = {
+            position = "float"
+          },
+        },
         filesystem = {
+          window = {
+            position = "float"
+          },
           follow_current_file = {
             enabled = true,
             leave_dirs_open = true

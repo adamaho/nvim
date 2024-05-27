@@ -1,8 +1,8 @@
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
--- See `:help vim.keymap.set()`
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Back to netrw' })
+vim.keymap.set('n', '<leader>pv', "<Cmd>Neotree toggle<CR>", { desc = 'Open file explorer' })
+vim.keymap.set('n', '<leader>pg', "<Cmd>Neotree git_status<CR>", { desc = 'Open git view' })
 vim.keymap.set('i', 'jj', "<Esc>", { desc = 'Back to normal mode' })
 
 -- Code Editing
@@ -23,9 +23,6 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
--- NeoTree
-vim.keymap.set('n', '<leader>b', "<Cmd>Neotree toggle<CR>", { desc = 'Toggle sidebar' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
