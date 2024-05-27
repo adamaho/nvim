@@ -56,7 +56,18 @@ require('lazy').setup({
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     },
+    config = function()
+      require("neo-tree").setup({
+        filesystem = {
+          follow_current_file = {
+            enabled = true,
+            leave_dirs_open = true
+          }
+        }
+      })
+    end
   },
+
   -- Git Diff View
   {
     "sindrets/diffview.nvim"
