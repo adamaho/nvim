@@ -48,7 +48,5 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- theme
-vim.cmd.colorscheme 'tokyonight-storm'
+vim.cmd.colorscheme 'tokyonight-moon'
 
-
--- vim: ts=2 sts=2 sw=2 et

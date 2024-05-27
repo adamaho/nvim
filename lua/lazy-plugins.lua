@@ -107,9 +107,6 @@ require('lazy').setup({
   {
     'folke/tokyonight.nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-frappe'
-    end,
   },
   {
     -- Set lualine as statusline
@@ -118,7 +115,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'catppuccin-frappe',
+        theme = 'auto',
         component_separators = '|',
         section_separators = '',
       },
