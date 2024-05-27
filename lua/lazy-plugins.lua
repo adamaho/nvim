@@ -6,10 +6,6 @@
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
 
-  -- Git related plugins
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
-
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -59,7 +55,11 @@ require('lazy').setup({
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
-    }
+    },
+  },
+  -- Git Diff View
+  {
+    "sindrets/diffview.nvim"
   },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
@@ -101,14 +101,16 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
     'catppuccin/nvim',
+    priority = 1000,
+  },
+  {
+    'folke/tokyonight.nvim',
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'catppuccin-frappe'
     end,
   },
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',

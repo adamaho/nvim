@@ -12,7 +12,6 @@ vim.keymap.set("n", "<leader>.", "<Cmd>lua vim.lsp.buf.code_action()<CR>", { des
 
 -- Formatting
 vim.keymap.set("n", "<leader>f", "<Cmd>lua vim.lsp.buf.format({ timeout_ms = 2000 })<CR>")
-
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
@@ -24,6 +23,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- NeoTree
+vim.keymap.set('n', '<leader>b', "<Cmd>Neotree toggle<CR>", { desc = 'Toggle sidebar' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
