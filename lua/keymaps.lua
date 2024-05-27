@@ -1,8 +1,8 @@
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
--- See `:help vim.keymap.set()`
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Back to netrw' })
+vim.keymap.set('n', '<leader>pv', "<Cmd>Neotree toggle<CR>", { desc = 'Open file explorer' })
+vim.keymap.set('n', '<leader>pg', "<Cmd>Neotree git_status<CR>", { desc = 'Open git view' })
 vim.keymap.set('i', 'jj', "<Esc>", { desc = 'Back to normal mode' })
 
 -- Code Editing
@@ -12,7 +12,6 @@ vim.keymap.set("n", "<leader>.", "<Cmd>lua vim.lsp.buf.code_action()<CR>", { des
 
 -- Formatting
 vim.keymap.set("n", "<leader>f", "<Cmd>lua vim.lsp.buf.format({ timeout_ms = 2000 })<CR>")
-
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap

@@ -6,10 +6,6 @@
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
 
-  -- Git related plugins
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
-
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -59,7 +55,36 @@ require('lazy').setup({
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
-    }
+    },
+    config = function()
+      require("neo-tree").setup({
+        git_status = {
+          window = {
+            position = "float",
+            popup = {
+              position = "0%"
+            }
+          },
+        },
+        filesystem = {
+          follow_current_file = {
+            enabled = true,
+            leave_dirs_open = true
+          },
+          window = {
+            position = "float",
+            popup = {
+              position = "0%"
+            },
+          },
+        },
+      })
+    end
+  },
+
+  -- Git Diff View
+  {
+    "sindrets/diffview.nvim"
   },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
@@ -101,14 +126,13 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
     'catppuccin/nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-frappe'
-    end,
   },
-
+  {
+    'folke/tokyonight.nvim',
+    priority = 1000,
+  },
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -116,7 +140,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'catppuccin-frappe',
+        theme = 'auto',
         component_separators = '|',
         section_separators = '',
       },
