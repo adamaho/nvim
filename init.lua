@@ -31,4 +31,3 @@ require('lsp-setup')
 -- [[ Configure nvim-cmp ]]
 -- (completion)
 require('cmp-setup')
-
