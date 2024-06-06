@@ -4,7 +4,7 @@
 --
 -- Turn off autoformat for any ts or js related files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "lua", "typescriptreact", "typescript", "astro", "svelte", "javascript", "javascriptreact" },
+  pattern = { "lua", "markdown", "typescriptreact", "typescript", "astro", "svelte", "javascript", "javascriptreact" },
   callback = function()
     vim.b.autoformat = false
   end,
