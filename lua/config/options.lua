@@ -6,3 +6,6 @@ vim.filetype.add({
     mdx = "mdx",
   },
 })
+
+vim.opt.conceallevel = 0;
+vim.opt.tabstop = 2;
