@@ -9,3 +9,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.b.autoformat = false
   end,
 })
+
+
+-- Disable scroll animation
+vim.g.snacks_animate = false;
